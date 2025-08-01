@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @event %>
+<p><strong>Venue Capacity: </strong><%= @event.venue_capacity %></p>
+<div>
+  <%= link_to "Edit this event", edit_event_path(@event), style: "display: inline-block; padding: 10px 15px; background-color: lime; color:black; border-radius: 5px"%> |
+  <%= link_to "Back to events", events_path, style: "display:inline-block; background-color: yellow; padding: 10px 15px; border-radius: 5px; color:black" %> |
+  <%= link_to "Download", download_attendees_event_path(@event), style: "display: inline-block; background-color: cyan; padding: 10px 15px;color:black;border-radius:5px "%><br><br>
+  <%= button_to "Destroy this event", @event, method: :delete, style: "padding: 10px 15px; color:black; background-color:red; border-radius: 5px" %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ticket %>
+
+<div>
+  <%= link_to "Edit this ticket", edit_ticket_path(@ticket),style: "padding: 10px 15px; border-radius: 5px; background-color: lime; color: black"%> |
+  <%= link_to "Back to tickets", tickets_path,style: "padding: 10px 15px; border-radius: 5px; background-color: yellow; color: black" %><br><br>
+
+  <%= button_to "Destroy this ticket", @ticket, method: :delete,style: "padding: 10px 15px; border-radius: 5px; background-color: red; color: black" %>
+</div>

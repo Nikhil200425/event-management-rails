@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Tickets" %>
+
+<h1>Tickets</h1>
+
+<div id="tickets">
+  <% @tickets.each do |ticket| %>
+    <%= render ticket %>
+    <p>
+      <%= link_to "Show this ticket", ticket, style: "padding: 10px 15px; border-radius: 5px; background-color: plum; color: black" %>
+    </p>
+  <% end %>
+</div>
+<br>
+<%= link_to "New ticket", new_ticket_path, style: "padding: 10px 15px; border-radius: 5px; background-color: gold; color: black" %>
